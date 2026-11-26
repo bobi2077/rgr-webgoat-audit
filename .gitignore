@@ -1,0 +1,8 @@
+webgoat/target/
+webgoat/.mvn/wrapper/maven-wrapper.jar
+*.class
+.idea/
+.vscode/
+tools/bin/
+scans/**/raw-tmp/
+__pycache__/
