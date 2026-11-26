@@ -1,0 +1,122 @@
+# Custom Semgrep rules for the RGR audit profile "authentication and sessions" (variant 9).
+# Scope: lesson packages that implement authentication / session / token handling.
+rules:
+  - id: rgr-jjwt-parse-accepts-unsigned
+    message: >-
+      jjwt Jwts.parser().parse() accepts unsigned tokens ("alg":"none"). Use parseClaimsJws()
+      so that a valid signature is mandatory (CWE-347).
+    severity: ERROR
+    languages: [java]
+    metadata: {cwe: "CWE-347", owasp: "A02:2021, A07:2021", rgr: V4}
+    pattern-either:
+      - pattern: Jwts.parser(). ... .parse($T)
+      - pattern: Jwts.parser().parse($T)
+    paths: &scope
+      include:
+        - "**/lessons/authbypass/**"
+        - "**/lessons/hijacksession/**"
+        - "**/lessons/spoofcookie/**"
+        - "**/lessons/jwt/**"
+        - "**/lessons/passwordreset/**"
+        - "**/lessons/insecurelogin/**"
+        - "**/lessons/securepasswords/**"
+
+  - id: rgr-jwt-hardcoded-or-guessable-key
+    message: >-
+      JWT HMAC key is a literal / dictionary value present in source code. Generate it with a
+      CSPRNG (>= 256 bit) or load it from a secret store (CWE-798, CWE-1391).
+    severity: ERROR
+    languages: [java]
+    metadata: {cwe: "CWE-798", owasp: "A02:2021, A07:2021", rgr: V5}
+    pattern-either:
+      - pattern: TextCodec.BASE64.encode("...")
+      - pattern: TextCodec.BASE64.encode($ARR[new Random().nextInt(...)])
+      - pattern: $B.signWith($ALG, "...")
+      - pattern: $B.setSigningKey("...")
+    paths: *scope
+
+  - id: rgr-jwt-key-literal-field
+    message: >-
+      Field that holds a JWT signing secret is initialised from a string literal (CWE-798).
+    severity: ERROR
+    languages: [java]
+    metadata: {cwe: "CWE-798", rgr: V5}
+    patterns:
+      - pattern: $T $K = "...";
+      - metavariable-regex:
+          metavariable: $K
+          regex: "(?i)^(JWT_.*|.*SECRET.*|.*SIGNING.*)$"
+    paths: *scope
+
+  - id: rgr-jdbc-string-concatenation
+    message: >-
+      SQL statement built by string concatenation with request-controlled data. Use
+      PreparedStatement with bind parameters (CWE-89).
+    severity: ERROR
+    languages: [java]
+    metadata: {cwe: "CWE-89", owasp: "A03:2021", rgr: V6}
+    pattern-either:
+      - pattern: $S.executeQuery("..." + $X + ...)
+      - pattern: $S.executeQuery("..." + $X)
+      - pattern: $S.execute("..." + $X + ...)
+    paths: *scope
+
+  - id: rgr-predictable-session-or-token-id
+    message: >-
+      Session / token identifier derived from a non-cryptographic or observable source
+      (java.util.Random, counter, timestamp, RandomStringUtils). Use SecureRandom with >= 128 bits
+      (CWE-330, CWE-341).
+    severity: ERROR
+    languages: [java]
+    metadata: {cwe: "CWE-330", owasp: "A07:2021", rgr: V2}
+    pattern-either:
+      - pattern: new Random()
+      - pattern: new java.util.Random()
+      - pattern: ++$ID + "-" + Instant.now().toEpochMilli()
+      - pattern: RandomStringUtils.randomAlphabetic(...)
+      - pattern: RandomStringUtils.randomAlphanumeric(...)
+    paths: *scope
+
+  - id: rgr-reversible-auth-cookie-encoding
+    message: >-
+      Authentication cookie value is produced by a keyless reversible encoding
+      (reverse/hex/base64) and therefore can be forged. Protect it with a keyed MAC (CWE-565).
+    severity: ERROR
+    languages: [java]
+    metadata: {cwe: "CWE-565", owasp: "A07:2021", rgr: V3}
+    patterns:
+      - pattern-inside: |
+          $RET $M(...) { ... $A = hexEncode(...); ... }
+      - pattern: base64Encode(...)
+    paths: *scope
+
+  - id: rgr-auth-cookie-without-httponly
+    message: >-
+      Session/authentication cookie is added without HttpOnly, exposing it to script access
+      (CWE-1004).
+    severity: WARNING
+    languages: [java]
+    metadata: {cwe: "CWE-1004", owasp: "A05:2021", rgr: "V2,V3"}
+    patterns:
+      - pattern: |
+          Cookie $C = new Cookie(...);
+          ...
+          $R.addCookie($C);
+      - pattern-not: |
+          Cookie $C = new Cookie(...);
+          ...
+          $C.setHttpOnly(true);
+          ...
+          $R.addCookie($C);
+    paths: *scope
+
+  - id: rgr-exception-detail-reflected
+    message: >-
+      Internal exception text (e.g. SQL engine errors) is returned to the client (CWE-209).
+    severity: WARNING
+    languages: [java]
+    metadata: {cwe: "CWE-209", owasp: "A04:2021", rgr: V6}
+    pattern-either:
+      - pattern: $B.output($E.getMessage())
+      - pattern: $B.output(errorMessage[0])
+    paths: *scope

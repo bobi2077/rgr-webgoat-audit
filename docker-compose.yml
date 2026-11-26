@@ -1,0 +1,44 @@
+# Isolated lab for the RGR audit (variant 9: OWASP WebGoat, authentication & sessions).
+#
+#   cd webgoat && mvn -B -DskipTests package && cd ..
+#   docker compose up --build -d
+#   open http://127.0.0.1:8080/WebGoat
+#
+# Isolation model:
+#   * "webgoat" is attached ONLY to the internal network "lab" (internal: true) -> the container
+#     has no route to the host LAN or the Internet (no egress, no DNS to the outside).
+#   * "gateway" (nginx) is the only service on both networks; it publishes ports on 127.0.0.1
+#     only, so the target is reachable from this machine and nowhere else.
+services:
+  webgoat:
+    build:
+      context: ./webgoat
+      dockerfile: Dockerfile
+    image: rgr/webgoat:2025.3-fixed
+    environment:
+      WEBGOAT_HOST: 0.0.0.0
+      WEBGOAT_PORT: "8080"
+      WEBWOLF_HOST: 0.0.0.0
+      WEBWOLF_PORT: "9090"
+      TZ: Europe/Kyiv
+    networks: [lab]
+    read_only: false
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 2g
+    pids_limit: 512
+
+  gateway:
+    image: nginx:1.27-alpine
+    depends_on: [webgoat]
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:9090:9090"
+    networks: [lab, edge]
+
+networks:
+  lab:
+    internal: true
+  edge: {}
