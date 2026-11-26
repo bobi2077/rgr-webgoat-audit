@@ -11,12 +11,10 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.impl.TextCodec;
 import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 import org.owasp.webgoat.container.assignments.AssignmentEndpoint;
 import org.owasp.webgoat.container.assignments.AssignmentHints;
 import org.owasp.webgoat.container.assignments.AttackResult;
@@ -31,11 +29,16 @@ import org.springframework.web.bind.annotation.RestController;
 @AssignmentHints({"jwt-secret-hint1", "jwt-secret-hint2", "jwt-secret-hint3"})
 public class JWTSecretKeyEndpoint implements AssignmentEndpoint {
 
+  /**
+   * Former key candidates. Kept only as a public "known-weak" list (used by the integration test
+   * and the RGR regression test); they are no longer used as key material.
+   */
   public static final String[] SECRETS = {
     "victory", "business", "available", "shipping", "washington"
   };
-  public static final String JWT_SECRET =
-      TextCodec.BASE64.encode(SECRETS[new Random().nextInt(SECRETS.length)]);
+
+  // RGR V5 fix: 256-bit CSPRNG key (was one of the five dictionary words above).
+  public static final String JWT_SECRET = JwtKeys.fromEnvOrRandom("WEBGOAT_JWT_SECRET_HS256", 32);
   private static final String WEBGOAT_USER = "WebGoat";
   private static final List<String> expectedClaims =
       List.of("iss", "iat", "exp", "aud", "sub", "username", "Email", "Role");
@@ -74,7 +77,7 @@ public class JWTSecretKeyEndpoint implements AssignmentEndpoint {
         }
       }
     } catch (Exception e) {
-      return failed(this).feedback("jwt-invalid-token").output(e.getMessage()).build();
+      return failed(this).feedback("jwt-invalid-token").build();
     }
   }
 }

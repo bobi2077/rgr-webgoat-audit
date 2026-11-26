@@ -77,7 +77,11 @@
     <java.version>23</java.version>
     <jaxb.version>2.3.1</jaxb.version>
     <jjwt.version>0.9.1</jjwt.version>
-    <jose4j.version>0.9.3</jose4j.version>
+    <!-- RGR SCA: CVE-2023-51775, CVE-2024-29371 fixed in 0.9.6 -->
+    <jose4j.version>0.9.6</jose4j.version>
+    <!-- RGR SCA: patch-level overrides of Spring Boot 3.4.3 managed versions (auth-related CVEs) -->
+    <spring-security.version>6.4.13</spring-security.version>
+    <tomcat.version>10.1.62</tomcat.version>
     <jquery.version>3.7.1</jquery.version>
     <jsoup.version>1.18.3</jsoup.version>
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>

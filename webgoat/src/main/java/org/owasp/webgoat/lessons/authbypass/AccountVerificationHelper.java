@@ -4,6 +4,8 @@
  */
 package org.owasp.webgoat.lessons.authbypass;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,27 +56,30 @@ public class AccountVerificationHelper {
 
   // end of cheating check ... the method below is the one of real interest. Can you find the flaw?
 
+  /**
+   * RGR V1 fix (CWE-287 / CWE-288). The original check only compared answers whose parameter names
+   * happened to be present, so renamed parameters skipped every comparison ("fail open"). Now the
+   * record of the <em>requested</em> user is used, the submitted key set must be exactly the
+   * expected one, and every answer is compared in constant time ("fail closed").
+   */
+  @SuppressWarnings("unchecked")
   public boolean verifyAccount(Integer userId, HashMap<String, String> submittedQuestions) {
-    // short circuit if no questions are submitted
-    if (submittedQuestions.entrySet().size() != secQuestionStore.get(verifyUserId).size()) {
+    if (userId == null || submittedQuestions == null) {
       return false;
     }
-
-    if (submittedQuestions.containsKey("secQuestion0")
-        && !submittedQuestions
-            .get("secQuestion0")
-            .equals(secQuestionStore.get(verifyUserId).get("secQuestion0"))) {
+    Map<String, String> expected = secQuestionStore.get(userId);
+    if (expected == null || !submittedQuestions.keySet().equals(expected.keySet())) {
       return false;
     }
-
-    if (submittedQuestions.containsKey("secQuestion1")
-        && !submittedQuestions
-            .get("secQuestion1")
-            .equals(secQuestionStore.get(verifyUserId).get("secQuestion1"))) {
-      return false;
+    boolean allMatch = true;
+    for (Map.Entry<String, String> e : expected.entrySet()) {
+      String given = submittedQuestions.get(e.getKey());
+      allMatch &=
+          given != null
+              && MessageDigest.isEqual(
+                  given.getBytes(StandardCharsets.UTF_8),
+                  e.getValue().getBytes(StandardCharsets.UTF_8));
     }
-
-    // else
-    return true;
+    return allMatch;
   }
 }

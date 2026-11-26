@@ -63,6 +63,7 @@ public class SpoofCookieAssignment implements AssignmentEndpoint {
   public void cleanup(HttpServletResponse response) {
     Cookie cookie = new Cookie(COOKIE_NAME, "");
     cookie.setMaxAge(0);
+    cookie.setHttpOnly(true);
     response.addCookie(cookie);
   }
 
@@ -80,6 +81,9 @@ public class SpoofCookieAssignment implements AssignmentEndpoint {
       Cookie newCookie = new Cookie(COOKIE_NAME, newCookieValue);
       newCookie.setPath("/WebGoat");
       newCookie.setSecure(true);
+      // RGR V3 fix (CWE-1004): authentication cookie is not exposed to scripts.
+      newCookie.setHttpOnly(true);
+      newCookie.setAttribute("SameSite", "Strict");
       response.addCookie(newCookie);
       return informationMessage(this)
           .feedback("spoofcookie.login")
@@ -95,8 +99,8 @@ public class SpoofCookieAssignment implements AssignmentEndpoint {
     try {
       cookieUsername = EncDec.decode(cookieValue).toLowerCase();
     } catch (Exception e) {
-      // for providing some instructive guidance, we won't return 4xx error here
-      return failed(this).output(e.getMessage()).build();
+      // RGR V3 fix (CWE-209): do not reflect decoder/MAC internals to the client.
+      return failed(this).feedback("spoofcookie.wrong-cookie").build();
     }
     if (users.containsKey(cookieUsername)) {
       if (cookieUsername.equals(ATTACK_USERNAME)) {

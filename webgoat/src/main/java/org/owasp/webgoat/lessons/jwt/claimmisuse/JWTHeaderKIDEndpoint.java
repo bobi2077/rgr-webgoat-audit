@@ -12,10 +12,13 @@ import io.jsonwebtoken.JwsHeader;
 import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureException;
 import io.jsonwebtoken.SigningKeyResolverAdapter;
 import io.jsonwebtoken.impl.TextCodec;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.owasp.webgoat.container.LessonDataSource;
 import org.owasp.webgoat.container.assignments.AssignmentEndpoint;
@@ -40,6 +43,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/JWT/")
 public class JWTHeaderKIDEndpoint implements AssignmentEndpoint {
   private final LessonDataSource dataSource;
+  private static final Pattern KID_PATTERN = Pattern.compile("^[A-Za-z0-9_-]{1,64}$");
 
   private JWTHeaderKIDEndpoint(LessonDataSource dataSource) {
     this.dataSource = dataSource;
@@ -60,33 +64,36 @@ public class JWTHeaderKIDEndpoint implements AssignmentEndpoint {
       return failed(this).feedback("jwt-invalid-token").build();
     } else {
       try {
-        final String[] errorMessage = {null};
         Jwt jwt =
             Jwts.parser()
                 .setSigningKeyResolver(
                     new SigningKeyResolverAdapter() {
                       @Override
                       public byte[] resolveSigningKeyBytes(JwsHeader header, Claims claims) {
-                        final String kid = (String) header.get("kid");
-                        try (var connection = dataSource.getConnection()) {
-                          ResultSet rs =
-                              connection
-                                  .createStatement()
-                                  .executeQuery(
-                                      "SELECT key FROM jwt_keys WHERE id = '" + kid + "'");
-                          while (rs.next()) {
-                            return TextCodec.BASE64.decode(rs.getString(1));
+                        // RGR V6 fix (CWE-89): "kid" is attacker-controlled. Validate its shape and
+                        // bind it as a parameter, so it can only SELECT an existing server key.
+                        final Object kidObj = header.get("kid");
+                        if (!(kidObj instanceof String kid) || !KID_PATTERN.matcher(kid).matches()) {
+                          throw new SignatureException("Unknown key id");
+                        }
+                        try (var connection = dataSource.getConnection();
+                            PreparedStatement ps =
+                                connection.prepareStatement(
+                                    "SELECT key FROM jwt_keys WHERE id = ?")) {
+                          ps.setString(1, kid);
+                          try (ResultSet rs = ps.executeQuery()) {
+                            if (rs.next()) {
+                              return TextCodec.BASE64.decode(rs.getString(1));
+                            }
                           }
                         } catch (SQLException e) {
-                          errorMessage[0] = e.getMessage();
+                          // RGR V6 fix (CWE-209): never reflect database errors to the client.
+                          throw new SignatureException("Key lookup failed");
                         }
-                        return null;
+                        throw new SignatureException("Unknown key id");
                       }
                     })
                 .parseClaimsJws(token);
-        if (errorMessage[0] != null) {
-          return failed(this).output(errorMessage[0]).build();
-        }
         Claims claims = (Claims) jwt.getBody();
         String username = (String) claims.get("username");
         if ("Jerry".equals(username)) {
@@ -97,8 +104,8 @@ public class JWTHeaderKIDEndpoint implements AssignmentEndpoint {
         } else {
           return failed(this).feedback("jwt-final-not-tom").build();
         }
-      } catch (JwtException e) {
-        return failed(this).feedback("jwt-invalid-token").output(e.toString()).build();
+      } catch (JwtException | IllegalArgumentException e) {
+        return failed(this).feedback("jwt-invalid-token").build();
       }
     }
   }

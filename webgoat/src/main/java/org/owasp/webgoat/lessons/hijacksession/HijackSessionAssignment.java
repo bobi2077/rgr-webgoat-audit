@@ -73,6 +73,9 @@ public class HijackSessionAssignment implements AssignmentEndpoint {
     Cookie cookie = new Cookie(COOKIE_NAME, cookieValue);
     cookie.setPath("/WebGoat");
     cookie.setSecure(true);
+    // RGR V2 fix (CWE-1004): session cookie must not be readable from scripts.
+    cookie.setHttpOnly(true);
+    cookie.setAttribute("SameSite", "Strict");
     response.addCookie(cookie);
   }
 }

@@ -32,10 +32,9 @@ public class JWTRefreshEndpointTest extends LessonTest {
   }
 
   @Test
-  void solveAssignment() throws Exception {
+  void refreshWithJerrysTokenForTomIsBlocked() throws Exception {
+    // RGR: this test used to assert that the attack SUCCEEDS; after the fix it must be blocked.
     ObjectMapper objectMapper = new ObjectMapper();
-
-    // First login to obtain tokens for Jerry
     var loginJson = Map.of("user", "Jerry", "password", PASSWORD);
     MvcResult result =
         mockMvc
@@ -47,37 +46,22 @@ public class JWTRefreshEndpointTest extends LessonTest {
             .andReturn();
     Map<String, String> tokens =
         objectMapper.readValue(result.getResponse().getContentAsString(), Map.class);
-    String refreshToken = tokens.get("refresh_token");
-
-    // Now create a new refresh token for Tom based on Toms old access token and send the refresh
-    // token of Jerry
     String accessTokenTom =
         "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1MjYxMzE0MTEsImV4cCI6MTUyNjIxNzgxMSwiYWRtaW4iOiJmYWxzZSIsInVzZXIiOiJUb20ifQ.DCoaq9zQkyDH25EcVWKcdbyVfUL4c9D4jRvsqOqvi9iAd4QuqmKcchfbU8FNzeBNF9tLeFXHZLU4yRkq-bjm7Q";
     Map<String, Object> refreshJson = new HashMap<>();
-    refreshJson.put("refresh_token", refreshToken);
-    result =
-        mockMvc
-            .perform(
-                MockMvcRequestBuilders.post("/JWT/refresh/newToken")
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .header("Authorization", "Bearer " + accessTokenTom)
-                    .content(objectMapper.writeValueAsString(refreshJson)))
-            .andExpect(status().isOk())
-            .andReturn();
-    tokens = objectMapper.readValue(result.getResponse().getContentAsString(), Map.class);
-    accessTokenTom = tokens.get("access_token");
-
-    // Now checkout with the new token from Tom
+    refreshJson.put("refresh_token", tokens.get("refresh_token"));
     mockMvc
         .perform(
-            MockMvcRequestBuilders.post("/JWT/refresh/checkout")
-                .header("Authorization", "Bearer " + accessTokenTom))
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$.lessonCompleted", is(true)));
+            MockMvcRequestBuilders.post("/JWT/refresh/newToken")
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("Authorization", "Bearer " + accessTokenTom)
+                .content(objectMapper.writeValueAsString(refreshJson)))
+        .andExpect(status().isUnauthorized());
   }
 
   @Test
-  void solutionWithAlgNone() throws Exception {
+  void algNoneIsBlocked() throws Exception {
+    // RGR: this test used to assert that the attack SUCCEEDS; after the fix it must be blocked.
     String tokenWithNoneAlgorithm =
         Jwts.builder()
             .setHeaderParam("alg", "none")
@@ -90,9 +74,7 @@ public class JWTRefreshEndpointTest extends LessonTest {
             MockMvcRequestBuilders.post("/JWT/refresh/checkout")
                 .header("Authorization", "Bearer " + tokenWithNoneAlgorithm))
         .andExpect(status().isOk())
-        .andExpect(jsonPath("$.lessonCompleted", is(true)))
-        .andExpect(
-            jsonPath("$.feedback", CoreMatchers.is(messages.getMessage("jwt-refresh-alg-none"))));
+        .andExpect(jsonPath("$.lessonCompleted", is(false)));
   }
 
   @Test
@@ -104,7 +86,9 @@ public class JWTRefreshEndpointTest extends LessonTest {
             MockMvcRequestBuilders.post("/JWT/refresh/checkout")
                 .header("Authorization", "Bearer " + accessTokenTom))
         .andExpect(status().isOk())
-        .andExpect(jsonPath("$.output", CoreMatchers.containsString("JWT expired at")));
+        // RGR: the leaked token was signed with the old hard-coded key -> now simply invalid
+        .andExpect(
+            jsonPath("$.feedback", CoreMatchers.is(messages.getMessage("jwt-invalid-token"))));
   }
 
   @Test
