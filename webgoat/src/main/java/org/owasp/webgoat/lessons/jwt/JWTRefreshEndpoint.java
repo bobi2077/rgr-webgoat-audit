@@ -107,7 +107,8 @@ public class JWTRefreshEndpoint implements AssignmentEndpoint {
       }
       return ok(failed(this).feedback("jwt-refresh-not-tom").feedbackArgs(user).build());
     } catch (ExpiredJwtException e) {
-      return ok(failed(this).output(e.getMessage()).build());
+      // RGR (CWE-209): no parser internals in the response
+      return ok(failed(this).feedback("jwt-invalid-token").build());
     } catch (JwtException e) {
       return ok(failed(this).feedback("jwt-invalid-token").build());
     }

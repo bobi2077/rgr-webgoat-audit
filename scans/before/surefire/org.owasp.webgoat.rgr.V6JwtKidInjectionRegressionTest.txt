@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------------
+Test set: org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.116 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest
+org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.sqlErrorsAreNotReflected -- Time elapsed: 0.050 s <<< ERROR!
+jakarta.servlet.ServletException: Request processing failed: java.lang.IllegalArgumentException: Missing argument
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.sqlErrorsAreNotReflected(V6JwtKidInjectionRegressionTest.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.IllegalArgumentException: Missing argument
+	at java.base/javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:104)
+	at io.jsonwebtoken.SigningKeyResolverAdapter.resolveSigningKey(SigningKeyResolverAdapter.java:51)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:316)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpoint.resetVotes(JWTHeaderKIDEndpoint.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	... 12 more
+
+org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.unionInjectedKeyIsRejected -- Time elapsed: 0.063 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.unionInjectedKeyIsRejected(V6JwtKidInjectionRegressionTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

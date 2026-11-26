@@ -1,0 +1,5 @@
+### V4 POST /JWT/votings with unsigned admin token
+>>> POST /WebGoat/JWT/votings  Cookie: access_token=eyJhbGciOiJub25lIn0.eyJhZG1pbiI6InRydWUiLCJ1c2VyIjoiVG9tIn0.
+<<< HTTP 200
+<<< { "lessonCompleted" : false, "feedback" : "Not a valid JWT token, please try again", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "JWTVotesEndpoint", "attemptWasMade" : true }
+

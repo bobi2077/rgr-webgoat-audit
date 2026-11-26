@@ -1,0 +1,1556 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.owasp.webgoat:webgoat >----------------------
+[INFO] Building WebGoat 2025.3
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ webgoat ---
+[INFO] Deleting E:\rgr\webgoat\target
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (restrict-log4j-versions) @ webgoat ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ webgoat ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 640 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- build-helper:3.6.0:reserve-network-port (reserve-container-port) @ webgoat ---
+[INFO] Reserved port 53704 for webgoat.port
+[INFO] Reserved port 53705 for webwolf.port
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ webgoat ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 260 source files with javac [debug parameters release 23] to target\classes
+[WARNING] /E:/rgr/webgoat/src/main/java/org/owasp/webgoat/webwolf/mailbox/Email.java:[36,37] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[WARNING] /E:/rgr/webgoat/src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java:[35,18] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[WARNING] /E:/rgr/webgoat/src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java:[42,19] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[INFO] /E:/rgr/webgoat/src/main/java/org/dummy/insecure/framework/VulnerableTaskHolder.java: Some input files use or override a deprecated API.
+[INFO] /E:/rgr/webgoat/src/main/java/org/dummy/insecure/framework/VulnerableTaskHolder.java: Recompile with -Xlint:deprecation for details.
+[INFO] /E:/rgr/webgoat/src/main/java/org/owasp/webgoat/lessons/authbypass/VerifyAccount.java: Some input files use unchecked or unsafe operations.
+[INFO] /E:/rgr/webgoat/src/main/java/org/owasp/webgoat/lessons/authbypass/VerifyAccount.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- build-helper:3.6.0:add-test-source (add-integration-test-source-as-test-sources) @ webgoat ---
+[INFO] Test Source directory: E:\rgr\webgoat\src\it\java added.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ webgoat ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ webgoat ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 117 source files with javac [debug parameters release 23] to target\test-classes
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[INFO] /E:/rgr/webgoat/src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java: E:\rgr\webgoat\src\it\java\org\owasp\webgoat\playwright\webwolf\JwtUITest.java uses or overrides a deprecated API.
+[INFO] /E:/rgr/webgoat/src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /E:/rgr/webgoat/src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /E:/rgr/webgoat/src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ webgoat ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.owasp.webgoat.lessons.authbypass.BypassVerificationTest
+[main] INFO  o.o.w.l.a.BypassVerificationTest - Starting BypassVerificationTest using Java 23.0.1 with PID 5204 (started by yaros in E:\rgr\webgoat) 
+[main] INFO  o.o.w.l.a.BypassVerificationTest - No active profile set, falling back to 1 default profile: "default" 
+[main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces. 
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\yaros\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 0 (http) 
+2026-11-26T12:25:59.672+02:00  INFO 5204 --- [WebGoat] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[main] INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+2026-11-26T12:25:59.676+02:00  INFO 5204 --- [WebGoat] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+[main] INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36] 
+2026-11-26T12:25:59.812+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring embedded WebApplicationContext
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring embedded WebApplicationContext 
+[main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7710 ms 
+2026-11-26T12:26:01.552+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:01.602+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.database.base.Schema   : Creating schema "container" ...
+[main] INFO  o.f.c.i.d.b.Schema - Creating schema "container" ... 
+2026-11-26T12:26:01.725+02:00  INFO 5204 --- [WebGoat] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "container"."flyway_schema_history" ...
+[main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "container"."flyway_schema_history" ... 
+2026-11-26T12:26:01.883+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "container": null
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "container": null 
+2026-11-26T12:26:01.905+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "container" to version "1 - init"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "container" to version "1 - init" 
+2026-11-26T12:26:01.951+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "container", now at version v1 (execution time 00:00.017s)
+[main] INFO  o.f.c.i.c.DbMigrate - Successfully applied 1 migration to schema "container", now at version v1 (execution time 00:00.017s) 
+2026-11-26T12:26:02.483+02:00  INFO 5204 --- [WebGoat] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+[main] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2026-11-26T12:26:02.597+02:00  INFO 5204 --- [WebGoat] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+[main] INFO  o.h.Version - HHH000412: Hibernate ORM core version 6.6.8.Final 
+2026-11-26T12:26:02.658+02:00  INFO 5204 --- [WebGoat] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+[main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+[main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+2026-11-26T12:26:02.882+02:00  WARN 5204 --- [WebGoat] [           main] org.hibernate.orm.deprecation            : HHH90000025: HSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[main] WARN  o.h.o.deprecation - HHH90000025: HSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+2026-11-26T12:26:02.893+02:00  INFO 5204 --- [WebGoat] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@5862ab28']
+	Database driver: undefined/unknown
+	Database version: 2.7.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[main] INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@5862ab28']
+	Database driver: undefined/unknown
+	Database version: 2.7.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown 
+2026-11-26T12:26:03.907+02:00  INFO 5204 --- [WebGoat] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[main] INFO  o.o.w.l.l.LogBleedingTask - Password for admin: NDQzZTZmZWMtMmZlMC00YmQ3LWE3YjEtODkxM2NkZWRhYjdm 
+[main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR 
+[main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator' 
+[main] WARN  o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry - One of the patterns in [/favicon.ico, /css/**, /images/**, /js/**, fonts/**, /plugins/**, /registration, /register.mvc, /actuator/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception. 
+[main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 65220 (http) with context path '/WebGoat' 
+[main] INFO  o.o.w.l.a.BypassVerificationTest - Started BypassVerificationTest in 28.258 seconds (process running for 30.918) 
+2026-11-26T12:26:19.321+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:19.422+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.database.base.Schema   : Creating schema "test" ...
+[main] INFO  o.f.c.i.d.b.Schema - Creating schema "test" ... 
+2026-11-26T12:26:19.429+02:00  INFO 5204 --- [WebGoat] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "test"."flyway_schema_history" ...
+[main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "test"."flyway_schema_history" ... 
+2026-11-26T12:26:19.445+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": null
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": null 
+2026-11-26T12:26:19.447+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2018.09.26.1 - users"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2018.09.26.1 - users" 
+2026-11-26T12:26:19.462+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.25.1 - jwt"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.25.1 - jwt" 
+2026-11-26T12:26:19.477+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.1 - servers"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.1 - servers" 
+2026-11-26T12:26:19.493+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.2 - users"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.2 - users" 
+2026-11-26T12:26:19.515+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.3 - salaries"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.3 - salaries" 
+2026-11-26T12:26:19.529+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.4 - tan"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.4 - tan" 
+2026-11-26T12:26:19.546+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.5 - challenge assignment"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.5 - challenge assignment" 
+2026-11-26T12:26:19.561+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.6 - user system data"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.6 - user system data" 
+2026-11-26T12:26:19.577+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.7 - employees"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.7 - employees" 
+2026-11-26T12:26:19.589+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.11.10.1 - introduction"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.11.10.1 - introduction" 
+2026-11-26T12:26:19.612+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2021.03.13.8 - grant"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2021.03.13.8 - grant" 
+2026-11-26T12:26:19.642+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2021.11.03.1 - ac"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2021.11.03.1 - ac" 
+2026-11-26T12:26:19.652+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 12 migrations to schema "test", now at version v2021.11.03.1 (execution time 00:00.026s)
+[main] INFO  o.f.c.i.c.DbMigrate - Successfully applied 12 migrations to schema "test", now at version v2021.11.03.1 (execution time 00:00.026s) 
+2026-11-26T12:26:19.673+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.01 s -- in org.owasp.webgoat.lessons.authbypass.BypassVerificationTest
+[INFO] Running org.owasp.webgoat.lessons.hijacksession.cas.HijackSessionAuthenticationProviderTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.181 s -- in org.owasp.webgoat.lessons.hijacksession.cas.HijackSessionAuthenticationProviderTest
+[INFO] Running org.owasp.webgoat.lessons.hijacksession.HijackSessionAssignmentTest
+[main] INFO  o.o.w.l.h.HijackSessionAssignmentTest - Starting HijackSessionAssignmentTest using Java 23.0.1 with PID 5204 (started by yaros in E:\rgr\webgoat) 
+[main] INFO  o.o.w.l.h.HijackSessionAssignmentTest - No active profile set, falling back to 1 default profile: "default" 
+[main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces. 
+[main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 0 (http) 
+2026-11-26T12:26:21.840+02:00  INFO 5204 --- [WebGoat] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[main] INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+2026-11-26T12:26:21.841+02:00  INFO 5204 --- [WebGoat] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+[main] INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36] 
+2026-11-26T12:26:22.105+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring embedded WebApplicationContext
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring embedded WebApplicationContext 
+[main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1854 ms 
+2026-11-26T12:26:22.192+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:22.205+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.004s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 2 migrations (execution time 00:00.004s) 
+2026-11-26T12:26:22.205+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "container": 1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "container": 1 
+2026-11-26T12:26:22.205+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "container" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "container" is up to date. No migration necessary. 
+2026-11-26T12:26:22.242+02:00  INFO 5204 --- [WebGoat] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+[main] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2026-11-26T12:26:22.244+02:00  INFO 5204 --- [WebGoat] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+[main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+[main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+2026-11-26T12:26:22.262+02:00  WARN 5204 --- [WebGoat] [           main] org.hibernate.orm.deprecation            : HHH90000025: HSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[main] WARN  o.h.o.deprecation - HHH90000025: HSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+2026-11-26T12:26:22.262+02:00  INFO 5204 --- [WebGoat] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@222c7639']
+	Database driver: undefined/unknown
+	Database version: 2.7.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[main] INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@222c7639']
+	Database driver: undefined/unknown
+	Database version: 2.7.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown 
+2026-11-26T12:26:22.377+02:00  INFO 5204 --- [WebGoat] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[main] INFO  o.o.w.l.l.LogBleedingTask - Password for admin: MDNlNGE4NjMtMGRiZC00YTU3LTk4NDItMGI5NzBiZjVhYzVh 
+[main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR 
+[main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator' 
+[main] WARN  o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry - One of the patterns in [/favicon.ico, /css/**, /images/**, /js/**, fonts/**, /plugins/**, /registration, /register.mvc, /actuator/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception. 
+[main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 59597 (http) with context path '/WebGoat' 
+[main] INFO  o.o.w.l.h.HijackSessionAssignmentTest - Started HijackSessionAssignmentTest in 4.046 seconds (process running for 35.836) 
+2026-11-26T12:26:24.044+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:24.067+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.015s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.015s) 
+2026-11-26T12:26:24.072+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:24.072+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:24.075+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:24.996+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:25.023+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.020s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.020s) 
+2026-11-26T12:26:25.029+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:25.030+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:25.031+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.164 s -- in org.owasp.webgoat.lessons.hijacksession.HijackSessionAssignmentTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderJKUEndpointTest
+2026-11-26T12:26:25.150+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:25.162+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.009s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.009s) 
+2026-11-26T12:26:25.167+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:25.167+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:25.167+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:25.167+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:26.794+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:26.812+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.013s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.013s) 
+2026-11-26T12:26:26.817+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:26.817+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:26.817+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms 
+2026-11-26T12:26:26.822+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.078 s -- in org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderJKUEndpointTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpointTest
+2026-11-26T12:26:27.223+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:27.238+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.011s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.011s) 
+2026-11-26T12:26:27.243+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:27.244+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:27.246+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:27.249+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:27.355+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:27.368+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.011s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.011s) 
+2026-11-26T12:26:27.373+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:27.373+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:27.378+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:27.378+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:27.466+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:27.482+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.011s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.011s) 
+2026-11-26T12:26:27.485+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:27.485+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:27.485+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms 
+2026-11-26T12:26:27.490+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.352 s -- in org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpointTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.JWTDecodeEndpointTest
+2026-11-26T12:26:27.665+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:27.683+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.012s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.012s) 
+2026-11-26T12:26:27.688+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:27.689+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:27.690+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:27.692+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:27.872+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:27.892+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.010s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.010s) 
+2026-11-26T12:26:27.892+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:27.892+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:27.897+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:27.899+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.394 s -- in org.owasp.webgoat.lessons.jwt.JWTDecodeEndpointTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.JWTRefreshEndpointTest
+2026-11-26T12:26:27.974+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:27.988+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.010s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.010s) 
+2026-11-26T12:26:27.988+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:27.992+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:27.992+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:27.994+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms 
+2026-11-26T12:26:28.050+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.062+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.009s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.009s) 
+2026-11-26T12:26:28.067+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.067+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.067+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.067+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms 
+2026-11-26T12:26:28.135+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.154+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.014s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.014s) 
+2026-11-26T12:26:28.157+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.159+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.160+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:28.162+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.223+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.240+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.011s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.011s) 
+2026-11-26T12:26:28.244+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.245+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.246+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:28.248+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:28.335+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.367+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.026s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.026s) 
+2026-11-26T12:26:28.371+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.374+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.375+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:28.377+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:28.472+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.485+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.009s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.009s) 
+2026-11-26T12:26:28.487+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.487+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.489+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:28.490+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.572+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.582+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:28.584+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.584+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.587+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.587+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.632+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.692+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.011s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.011s) 
+2026-11-26T12:26:28.705+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.706+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.707+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.707+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.752+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.769+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:28.772+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.773+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.774+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:28.775+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:28.822+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.842+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:28.842+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.844+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.844+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.844+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.892+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.902+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:28.909+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.909+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.911+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.912+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.952+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:28.965+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:28.967+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:28.967+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:28.967+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:28.967+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.049 s -- in org.owasp.webgoat.lessons.jwt.JWTRefreshEndpointTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpointTest
+2026-11-26T12:26:29.019+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.031+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:29.032+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.032+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.034+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.034+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.095+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.106+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:29.107+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.107+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.110+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:29.112+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:29.173+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.185+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:29.187+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.187+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.189+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:29.190+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:29.278+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.290+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.009s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.009s) 
+2026-11-26T12:26:29.297+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.297+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.300+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms 
+2026-11-26T12:26:29.304+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms 
+2026-11-26T12:26:29.393+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.413+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.014s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.014s) 
+2026-11-26T12:26:29.413+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.413+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.416+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:29.419+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.488+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.499+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:29.502+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.502+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.502+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms 
+2026-11-26T12:26:29.505+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.557 s -- in org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpointTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.JWTVotesEndpointTest
+2026-11-26T12:26:29.572+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.584+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:29.592+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.592+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.592+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:29.594+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.632+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.644+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:29.646+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.646+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.646+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.646+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.716+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.725+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:29.726+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.726+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.726+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.726+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.767+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.775+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:29.782+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.782+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.782+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms 
+2026-11-26T12:26:29.785+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.857+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.872+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:29.873+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.875+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.877+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 8 ms 
+2026-11-26T12:26:29.887+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:29.949+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:29.954+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:29.962+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:29.962+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:29.962+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:29.964+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.016+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.027+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:30.027+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.027+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.027+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.032+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.074+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.084+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:30.084+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.084+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.084+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.084+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.136+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.146+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:30.146+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.146+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.146+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.146+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.244+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.252+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:30.254+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.254+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.254+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+2026-11-26T12:26:30.256+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.295+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.306+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:30.306+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.306+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.306+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.306+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 6 ms 
+2026-11-26T12:26:30.349+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.355+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:30.355+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.355+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.355+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 7 ms 
+2026-11-26T12:26:30.362+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms 
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.835 s -- in org.owasp.webgoat.lessons.jwt.JWTVotesEndpointTest
+[INFO] Running org.owasp.webgoat.lessons.jwt.TokenTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.owasp.webgoat.lessons.jwt.TokenTest
+[INFO] Running org.owasp.webgoat.lessons.spoofcookie.encoders.EncDecTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.owasp.webgoat.lessons.spoofcookie.encoders.EncDecTest
+[INFO] Running org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignmentTest
+2026-11-26T12:26:30.445+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.455+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:30.458+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.458+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.458+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms 
+2026-11-26T12:26:30.515+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.526+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:30.528+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.528+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.528+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.586+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.598+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:30.598+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.598+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.598+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms 
+[main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'password' for method parameter type String is not present] 
+2026-11-26T12:26:30.646+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.654+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:30.658+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.664+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.666+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.712+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.722+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:30.723+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.724+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.725+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:30.766+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.774+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:30.774+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.774+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.774+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present] 
+2026-11-26T12:26:30.812+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.822+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:30.822+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.822+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.824+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:30.875+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.885+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:30.886+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.887+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.888+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:30.935+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:30.947+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:30.947+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:30.947+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:30.947+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms 
+2026-11-26T12:26:31.002+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.012+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:31.017+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.017+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.019+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:31.066+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.076+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.007s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.007s) 
+2026-11-26T12:26:31.078+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.078+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.078+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.122+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.132+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.134+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.134+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.136+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.746 s -- in org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignmentTest
+[INFO] Running org.owasp.webgoat.rgr.V1AuthBypassRegressionTest
+[ERROR] Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V1AuthBypassRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.unknownUserIsRejected -- Time elapsed: 0.012 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expecting value to be false but was true
+	at org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.unknownUserIsRejected(V1AuthBypassRegressionTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.renamedParametersAreRejected -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expecting value to be false but was true
+	at org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.renamedParametersAreRejected(V1AuthBypassRegressionTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.partialAnswersAreRejected -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expecting value to be false but was true
+	at org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.partialAnswersAreRejected(V1AuthBypassRegressionTest.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running org.owasp.webgoat.rgr.V2SessionIdRegressionTest
+2026-11-26T12:26:31.206+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.211+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.211+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.211+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.211+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.272+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.285+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:31.287+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.287+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.287+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.335+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.349+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:31.349+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.349+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.352+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.382+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.398+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:31.398+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.398+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.398+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms 
+[ERROR] Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.236 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V2SessionIdRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V2SessionIdRegressionTest.cookieIsHttpOnly -- Time elapsed: 0.060 s <<< FAILURE!
+java.lang.AssertionError: Response cookie 'hijack_cookie' httpOnly expected:<true> but was:<false>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.CookieResultMatchers.lambda$httpOnly$15(CookieResultMatchers.java:228)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V2SessionIdRegressionTest.cookieIsHttpOnly(V2SessionIdRegressionTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V2SessionIdRegressionTest.idIsNotCounterPlusTimestamp -- Time elapsed: 0.049 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual:
+  "3013374611874900874-1795688791352"
+not to match pattern:
+  "^[0-9]+-[0-9]{13}$"
+	at org.owasp.webgoat.rgr.V2SessionIdRegressionTest.idIsNotCounterPlusTimestamp(V2SessionIdRegressionTest.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V2SessionIdRegressionTest.consecutiveIdsAreNotSequential -- Time elapsed: 0.048 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual:
+  1L
+not to be equal to:
+  1L
+
+	at org.owasp.webgoat.rgr.V2SessionIdRegressionTest.consecutiveIdsAreNotSequential(V2SessionIdRegressionTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest
+2026-11-26T12:26:31.442+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.452+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.452+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.452+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.452+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.492+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.502+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.502+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.502+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.502+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.111 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.tamperedCookieRejected -- Time elapsed: 0.052 s <<< FAILURE!
+java.lang.AssertionError: Response cookie 'spoof_auth' httpOnly expected:<true> but was:<false>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.CookieResultMatchers.lambda$httpOnly$15(CookieResultMatchers.java:228)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.tamperedCookieRejected(V3CookieIntegrityRegressionTest.java:59)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.forgedCookieRejected -- Time elapsed: 0.050 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.assertNotLoggedInAsTom(V3CookieIntegrityRegressionTest.java:41)
+	at org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.forgedCookieRejected(V3CookieIntegrityRegressionTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest
+2026-11-26T12:26:31.552+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.562+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.562+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.562+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.562+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.602+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.607+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.607+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.607+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.612+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms 
+2026-11-26T12:26:31.652+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.661+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:31.661+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.661+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.661+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.159 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesListTreatsUnsignedAsGuest -- Time elapsed: 0.047 s <<< FAILURE!
+java.lang.AssertionError: Expected no value at JSON path "$[0].numberOfVotes" but found: 1
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:39)
+	at org.springframework.test.util.AssertionErrors.assertTrue(AssertionErrors.java:73)
+	at org.springframework.test.util.JsonPathExpectationsHelper.doesNotExist(JsonPathExpectationsHelper.java:263)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$doesNotExist$4(JsonPathResultMatchers.java:135)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesListTreatsUnsignedAsGuest(V4JwtUnsignedTokenRegressionTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesResetRejectsUnsignedToken -- Time elapsed: 0.051 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesResetRejectsUnsignedToken(V4JwtUnsignedTokenRegressionTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.refreshCheckoutRejectsUnsignedToken -- Time elapsed: 0.055 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.refreshCheckoutRejectsUnsignedToken(V4JwtUnsignedTokenRegressionTest.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest
+2026-11-26T12:26:31.713+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.722+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.722+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.722+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.722+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.762+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.772+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.774+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.774+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.776+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.822+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.832+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.008s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.008s) 
+2026-11-26T12:26:31.832+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.832+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.836+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.secretEndpointRejectsDictionaryKeys -- Time elapsed: 0.050 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.secretEndpointRejectsDictionaryKeys(V5JwtWeakKeyRegressionTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.refreshRejectsKeyFromSource -- Time elapsed: 0.053 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.refreshRejectsKeyFromSource(V5JwtWeakKeyRegressionTest.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.votesRejectDictionaryKeys -- Time elapsed: 0.059 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.votesRejectDictionaryKeys(V5JwtWeakKeyRegressionTest.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest
+2026-11-26T12:26:31.882+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.892+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:31.892+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.892+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.892+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:31.937+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:31.942+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:31.942+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:31.942+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:31.942+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 7 ms 
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.116 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.sqlErrorsAreNotReflected -- Time elapsed: 0.050 s <<< ERROR!
+jakarta.servlet.ServletException: Request processing failed: java.lang.IllegalArgumentException: Missing argument
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.sqlErrorsAreNotReflected(V6JwtKidInjectionRegressionTest.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.IllegalArgumentException: Missing argument
+	at java.base/javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:104)
+	at io.jsonwebtoken.SigningKeyResolverAdapter.resolveSigningKey(SigningKeyResolverAdapter.java:51)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:316)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpoint.resetVotes(JWTHeaderKIDEndpoint.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	... 12 more
+
+[ERROR] org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.unionInjectedKeyIsRejected -- Time elapsed: 0.063 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V6JwtKidInjectionRegressionTest.unionInjectedKeyIsRejected(V6JwtKidInjectionRegressionTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running org.owasp.webgoat.rgr.V7RefreshTokenBindingRegressionTest
+2026-11-26T12:26:32.009+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:32.017+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:32.017+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:32.017+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:32.022+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:32.062+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:32.076+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.006s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.006s) 
+2026-11-26T12:26:32.076+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:32.082+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:32.082+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:26:32.122+02:00  INFO 5204 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:26:32.122+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.005s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.005s) 
+2026-11-26T12:26:32.133+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:26:32.133+02:00  INFO 5204 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:26:32.135+02:00  INFO 5204 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[ERROR] Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.170 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V7RefreshTokenBindingRegressionTest
+[ERROR] org.owasp.webgoat.rgr.V7RefreshTokenBindingRegressionTest.accessTokenHasExpiry -- Time elapsed: 0.060 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual not to be null
+	at org.owasp.webgoat.rgr.V7RefreshTokenBindingRegressionTest.accessTokenHasExpiry(V7RefreshTokenBindingRegressionTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[ERROR] org.owasp.webgoat.rgr.V7RefreshTokenBindingRegressionTest.refreshTokenIsBoundToItsOwner -- Time elapsed: 0.045 s <<< ERROR!
+java.lang.UnsupportedOperationException
+	at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:142)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableMap.put(ImmutableCollections.java:1081)
+	at io.jsonwebtoken.impl.JwtMap.setDate(JwtMap.java:86)
+	at io.jsonwebtoken.impl.DefaultClaims.setIssuedAt(DefaultClaims.java:96)
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.setIssuedAt(DefaultJwtBuilder.java:215)
+	at org.owasp.webgoat.rgr.V7RefreshTokenBindingRegressionTest.refreshTokenIsBoundToItsOwner(V7RefreshTokenBindingRegressionTest.java:59)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   V1AuthBypassRegressionTest.partialAnswersAreRejected:38 
+Expecting value to be false but was true
+[ERROR]   V1AuthBypassRegressionTest.renamedParametersAreRejected:29 
+Expecting value to be false but was true
+[ERROR]   V1AuthBypassRegressionTest.unknownUserIsRejected:56 
+Expecting value to be false but was true
+[ERROR]   V2SessionIdRegressionTest.consecutiveIdsAreNotSequential:40 
+Expecting actual:
+  1L
+not to be equal to:
+  1L
+
+[ERROR]   V2SessionIdRegressionTest.cookieIsHttpOnly:64 Response cookie 'hijack_cookie' httpOnly expected:<true> but was:<false>
+[ERROR]   V2SessionIdRegressionTest.idIsNotCounterPlusTimestamp:27 
+Expecting actual:
+  "3013374611874900874-1795688791352"
+not to match pattern:
+  "^[0-9]+-[0-9]{13}$"
+[ERROR]   V3CookieIntegrityRegressionTest.forgedCookieRejected:47->assertNotLoggedInAsTom:41 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V3CookieIntegrityRegressionTest.tamperedCookieRejected:59 Response cookie 'spoof_auth' httpOnly expected:<true> but was:<false>
+[ERROR]   V4JwtUnsignedTokenRegressionTest.refreshCheckoutRejectsUnsignedToken:51 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V4JwtUnsignedTokenRegressionTest.votesListTreatsUnsignedAsGuest:62 Expected no value at JSON path "$[0].numberOfVotes" but found: 1
+[ERROR]   V4JwtUnsignedTokenRegressionTest.votesResetRejectsUnsignedToken:39 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V5JwtWeakKeyRegressionTest.refreshRejectsKeyFromSource:91 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V5JwtWeakKeyRegressionTest.secretEndpointRejectsDictionaryKeys:52 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V5JwtWeakKeyRegressionTest.votesRejectDictionaryKeys:74 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V6JwtKidInjectionRegressionTest.unionInjectedKeyIsRejected:43 JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+[ERROR]   V7RefreshTokenBindingRegressionTest.accessTokenHasExpiry:90 
+Expecting actual not to be null
+[ERROR] Errors: 
+[ERROR]   V6JwtKidInjectionRegressionTest.sqlErrorsAreNotReflected:50 » Servlet Request processing failed: java.lang.IllegalArgumentException: Missing argument
+[ERROR]   V7RefreshTokenBindingRegressionTest.refreshTokenIsBoundToItsOwner:59 » UnsupportedOperation
+[INFO] 
+[ERROR] Tests run: 90, Failures: 16, Errors: 2, Skipped: 0
+[INFO] 
+[ERROR] There are test failures.
+
+See E:\rgr\webgoat\target\surefire-reports for the individual test results.
+See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:18 min
+[INFO] Finished at: 2026-11-26T12:26:32+02:00
+[INFO] ------------------------------------------------------------------------

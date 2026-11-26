@@ -1,0 +1,13 @@
+### V2 five consecutive session ids from AUTHENTICATION_SUPPLIER
+<<< 1984493905488580518-1795690168806
+<<< 1984493905488580519-1795690168806
+<<< 1984493905488580520-1795690168806
+<<< 1984493905488580521-1795690168806
+<<< 1984493905488580522-1795690168806
+
+### V2 POST /HijackSession/login
+>>> POST /WebGoat/HijackSession/login  username=webgoat&password=webgoat
+<<< HTTP 200
+<<< Set-Cookie: hijack_cookie=1984493905488580523-1795690168811; Secure
+<<< { "lessonCompleted" : false, "feedback" : "Sorry the solution is not correct, please try again.", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "HijackSessionAssignment", "attemptWasMade" : true }
+

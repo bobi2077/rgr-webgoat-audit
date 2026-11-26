@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.159 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest
+org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesListTreatsUnsignedAsGuest -- Time elapsed: 0.047 s <<< FAILURE!
+java.lang.AssertionError: Expected no value at JSON path "$[0].numberOfVotes" but found: 1
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:39)
+	at org.springframework.test.util.AssertionErrors.assertTrue(AssertionErrors.java:73)
+	at org.springframework.test.util.JsonPathExpectationsHelper.doesNotExist(JsonPathExpectationsHelper.java:263)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$doesNotExist$4(JsonPathResultMatchers.java:135)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesListTreatsUnsignedAsGuest(V4JwtUnsignedTokenRegressionTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesResetRejectsUnsignedToken -- Time elapsed: 0.051 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.votesResetRejectsUnsignedToken(V4JwtUnsignedTokenRegressionTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.refreshCheckoutRejectsUnsignedToken -- Time elapsed: 0.055 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V4JwtUnsignedTokenRegressionTest.refreshCheckoutRejectsUnsignedToken(V4JwtUnsignedTokenRegressionTest.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

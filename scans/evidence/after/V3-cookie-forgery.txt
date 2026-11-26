@@ -1,0 +1,11 @@
+### V3 legitimate login as webgoat (cookie format)
+>>> POST /WebGoat/SpoofCookie/login  username=webgoat&password=webgoat
+<<< HTTP 200
+<<< Set-Cookie: spoof_auth=d2ViZ29hdA.A84fphGLUR51lt8wtyD1WWfh0Vf_QvBuDT7YB7rbLD0; HttpOnly; Secure
+<<< { "lessonCompleted" : false, "feedback" : "Logged in using credentials. Cookie created, see below.", "feedbackArgs" : null, "output" : "Cookie details for user webgoat:<br \\/>spoof_auth=d2ViZ29hdA.A84fphGLUR51lt8wtyD1WWfh0Vf_QvBuDT7YB7rbLD0", "outputArgs" : null, "assignment" : "SpoofCookieAssignment", "attemptWasMade" : false }
+
+### V3 forged cookie for tom, computed offline
+>>> POST /WebGoat/SpoofCookie/login  Cookie: spoof_auth=NDE0MTQxNDE0MTQxNDE0MTQxNDE2ZDZmNzQ=
+<<< HTTP 200
+<<< { "lessonCompleted" : false, "feedback" : "Wrong cookie sent.", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "SpoofCookieAssignment", "attemptWasMade" : true }
+

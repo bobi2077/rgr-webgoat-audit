@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest
+org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.secretEndpointRejectsDictionaryKeys -- Time elapsed: 0.050 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.secretEndpointRejectsDictionaryKeys(V5JwtWeakKeyRegressionTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.refreshRejectsKeyFromSource -- Time elapsed: 0.053 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.refreshRejectsKeyFromSource(V5JwtWeakKeyRegressionTest.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.votesRejectDictionaryKeys -- Time elapsed: 0.059 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V5JwtWeakKeyRegressionTest.votesRejectDictionaryKeys(V5JwtWeakKeyRegressionTest.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

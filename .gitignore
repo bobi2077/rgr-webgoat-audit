@@ -6,3 +6,6 @@ webgoat/.mvn/wrapper/maven-wrapper.jar
 tools/bin/
 scans/**/raw-tmp/
 __pycache__/
+tools/fsb/
+build-baseline.log
+scans/after-tests-draft.log

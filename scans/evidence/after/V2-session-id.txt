@@ -1,0 +1,13 @@
+### V2 five consecutive session ids from AUTHENTICATION_SUPPLIER
+<<< YyXyUqTAsj1pKplgbRTRHLHwVFOjPX3oJCPhmKL213w
+<<< KL98w6k2f6Mv9ngl4f-vzcJUYDMwpIWR2hezse6niro
+<<< ezvzp9pTfOTxZgjmHfAL1_t2lRj_A6CxrS-OEx2caKU
+<<< oGvEb3wCFymaXgZ0OanSWMqOI2PwzN8gu9GNO0g4kDI
+<<< eAOMMEbTjA3Nxg_qDDbNMA-RFEy9J4aWrCxuLM-SZIw
+
+### V2 POST /HijackSession/login
+>>> POST /WebGoat/HijackSession/login  username=webgoat&password=webgoat
+<<< HTTP 200
+<<< Set-Cookie: hijack_cookie=ZEAE8998VjgK0ZNFWuJ1f4WJU9o6z0bRGLvTxVYFODU; HttpOnly; Secure
+<<< { "lessonCompleted" : false, "feedback" : "Sorry the solution is not correct, please try again.", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "HijackSessionAssignment", "attemptWasMade" : true }
+

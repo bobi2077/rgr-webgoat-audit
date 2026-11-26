@@ -1,0 +1,659 @@
+{
+  "semgrep.json": {
+    "before": 18,
+    "after": 18,
+    "before_by_rule": {
+      "tainted-sql-string": 3,
+      "formatted-sql-string": 8,
+      "tainted-session-from-http-request": 1,
+      "use-of-md5": 1,
+      "tainted-url-host": 1,
+      "httpservlet-path-traversal": 1,
+      "tainted-file-path": 1,
+      "spring-actuator-dangerous-endpoints-enabled": 1,
+      "plaintext-http-link": 1
+    },
+    "after_by_rule": {
+      "tainted-sql-string": 3,
+      "formatted-sql-string": 8,
+      "tainted-session-from-http-request": 1,
+      "use-of-md5": 1,
+      "tainted-url-host": 1,
+      "httpservlet-path-traversal": 1,
+      "tainted-file-path": 1,
+      "spring-actuator-dangerous-endpoints-enabled": 1,
+      "plaintext-http-link": 1
+    },
+    "after_items": [
+      [
+        "tainted-sql-string",
+        "challenges/challenge5/Assignment5.java",
+        45
+      ],
+      [
+        "formatted-sql-string",
+        "challenges/challenge5/Assignment5.java",
+        50
+      ],
+      [
+        "tainted-session-from-http-request",
+        "cryptography/EncodingAssignment.java",
+        39
+      ],
+      [
+        "use-of-md5",
+        "cryptography/HashingAssignment.java",
+        39
+      ],
+      [
+        "tainted-url-host",
+        "jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+        57
+      ],
+      [
+        "httpservlet-path-traversal",
+        "pathtraversal/ProfileUploadRetrieval.java",
+        100
+      ],
+      [
+        "tainted-sql-string",
+        "sqlinjection/advanced/SqlInjectionChallenge.java",
+        55
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/advanced/SqlInjectionChallenge.java",
+        57
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/introduction/SqlInjectionLesson10.java",
+        56
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/introduction/SqlInjectionLesson5a.java",
+        52
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/introduction/SqlInjectionLesson5b.java",
+        69
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/introduction/SqlInjectionLesson8.java",
+        62
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/introduction/SqlInjectionLesson8.java",
+        142
+      ],
+      [
+        "formatted-sql-string",
+        "sqlinjection/introduction/SqlInjectionLesson9.java",
+        65
+      ],
+      [
+        "tainted-sql-string",
+        "sqlinjection/mitigation/Servers.java",
+        55
+      ],
+      [
+        "tainted-file-path",
+        "webgoat/src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+        79
+      ],
+      [
+        "spring-actuator-dangerous-endpoints-enabled",
+        "webgoat/src/main/resources/application-webgoat.properties",
+        72
+      ],
+      [
+        "plaintext-http-link",
+        "clientsidefiltering/html/ClientSideFiltering.html",
+        96
+      ]
+    ]
+  },
+  "semgrep-rgr.json": {
+    "before": 28,
+    "after": 1,
+    "before_by_rule": {
+      "rgr-auth-cookie-without-httponly": 5,
+      "rgr-predictable-session-or-token-id": 5,
+      "rgr-jwt-key-literal-field": 1,
+      "rgr-jwt-hardcoded-or-guessable-key": 5,
+      "rgr-jjwt-parse-accepts-unsigned": 5,
+      "rgr-exception-detail-reflected": 5,
+      "rgr-jdbc-string-concatenation": 1,
+      "rgr-reversible-auth-cookie-encoding": 1
+    },
+    "after_by_rule": {
+      "rgr-exception-detail-reflected": 1
+    },
+    "after_items": [
+      [
+        "rgr-exception-detail-reflected",
+        "passwordreset/SimpleMailAssignment.java",
+        89
+      ]
+    ]
+  },
+  "spotbugs_before": {
+    "total": 436,
+    "security": 263,
+    "security_in_scope": 51,
+    "in_scope_by_type": {
+      "SPRING_ENDPOINT": 31,
+      "PREDICTABLE_RANDOM": 3,
+      "IMPROPER_UNICODE": 6,
+      "SPRING_CSRF_UNRESTRICTED_REQUEST_MAPPING": 1,
+      "SQL_INJECTION_JDBC": 1,
+      "SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE": 1,
+      "HARD_CODE_PASSWORD": 1,
+      "SPRING_FILE_DISCLOSURE": 5,
+      "POTENTIAL_XML_INJECTION": 2
+    },
+    "in_scope_items": [
+      [
+        "HARD_CODE_PASSWORD",
+        "passwordreset.ResetLinkAssignment"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "jwt.JWTRefreshEndpoint"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "passwordreset.QuestionsAssignment"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "spoofcookie.SpoofCookieAssignment"
+      ],
+      [
+        "POTENTIAL_XML_INJECTION",
+        "securepasswords.SecurePasswordsAssignment"
+      ],
+      [
+        "PREDICTABLE_RANDOM",
+        "hijacksession.cas.HijackSessionAuthenticationProvider"
+      ],
+      [
+        "PREDICTABLE_RANDOM",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "SPRING_CSRF_UNRESTRICTED_REQUEST_MAPPING",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "authbypass.VerifyAccount"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "hijacksession.HijackSessionAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "insecurelogin.InsecureLoginTask"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTDecodeEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTQuiz"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTRefreshEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTVotesEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.claimmisuse.JWTHeaderJKUEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.claimmisuse.JWTHeaderKIDEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.QuestionsAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.ResetLinkAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.ResetLinkAssignmentForgotPassword"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.SecurityQuestionAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.SimpleMailAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "securepasswords.SecurePasswordsAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "spoofcookie.SpoofCookieAssignment"
+      ],
+      [
+        "SPRING_FILE_DISCLOSURE",
+        "passwordreset.ResetLinkAssignment"
+      ],
+      [
+        "SQL_INJECTION_JDBC",
+        "jwt.claimmisuse.JWTHeaderKIDEndpoint$1"
+      ],
+      [
+        "SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE",
+        "jwt.claimmisuse.JWTHeaderKIDEndpoint$1"
+      ]
+    ]
+  },
+  "spotbugs_after": {
+    "total": 424,
+    "security": 259,
+    "security_in_scope": 47,
+    "in_scope_by_type": {
+      "SPRING_ENDPOINT": 31,
+      "PREDICTABLE_RANDOM": 1,
+      "IMPROPER_UNICODE": 6,
+      "SPRING_CSRF_UNRESTRICTED_REQUEST_MAPPING": 1,
+      "HARD_CODE_PASSWORD": 1,
+      "SPRING_FILE_DISCLOSURE": 5,
+      "POTENTIAL_XML_INJECTION": 2
+    },
+    "in_scope_items": [
+      [
+        "HARD_CODE_PASSWORD",
+        "passwordreset.ResetLinkAssignment"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "jwt.JWTRefreshEndpoint"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "passwordreset.QuestionsAssignment"
+      ],
+      [
+        "IMPROPER_UNICODE",
+        "spoofcookie.SpoofCookieAssignment"
+      ],
+      [
+        "POTENTIAL_XML_INJECTION",
+        "securepasswords.SecurePasswordsAssignment"
+      ],
+      [
+        "PREDICTABLE_RANDOM",
+        "hijacksession.cas.HijackSessionAuthenticationProvider"
+      ],
+      [
+        "SPRING_CSRF_UNRESTRICTED_REQUEST_MAPPING",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "authbypass.VerifyAccount"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "hijacksession.HijackSessionAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "insecurelogin.InsecureLoginTask"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTDecodeEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTQuiz"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTRefreshEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTSecretKeyEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.JWTVotesEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.claimmisuse.JWTHeaderJKUEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "jwt.claimmisuse.JWTHeaderKIDEndpoint"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.QuestionsAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.ResetLinkAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.ResetLinkAssignmentForgotPassword"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.SecurityQuestionAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "passwordreset.SimpleMailAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "securepasswords.SecurePasswordsAssignment"
+      ],
+      [
+        "SPRING_ENDPOINT",
+        "spoofcookie.SpoofCookieAssignment"
+      ],
+      [
+        "SPRING_FILE_DISCLOSURE",
+        "passwordreset.ResetLinkAssignment"
+      ]
+    ]
+  },
+  "secrets_before": {
+    "total": 64,
+    "main": 39,
+    "in_scope": [
+      [
+        "Secret Keyword",
+        "webgoat/src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+        45
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+        46
+      ],
+      [
+        "Base64 High Entropy String",
+        "webgoat/src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java",
+        49
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_decode.adoc",
+        8
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+        28
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+        40
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment.adoc",
+        7
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment2.adoc",
+        7
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries_solution.adoc",
+        7
+      ],
+      [
+        "Hex High Entropy String",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_refresh.adoc",
+        32
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+        35
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+        77
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/html/JWT.html",
+        323
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/html/JWT.html",
+        389
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/images/logs.txt",
+        2
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/resources/lessons/passwordreset/i18n/WebGoatLabels.properties",
+        4
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/resources/lessons/securepasswords/i18n/WebGoatLabels.properties",
+        4
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/resources/lessons/securepasswords/i18n/WebGoatLabels_nl.properties",
+        4
+      ]
+    ]
+  },
+  "secrets_after": {
+    "total": 63,
+    "main": 38,
+    "in_scope": [
+      [
+        "Secret Keyword",
+        "webgoat/src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+        44
+      ],
+      [
+        "Base64 High Entropy String",
+        "webgoat/src/main/java/org/owasp/webgoat/lessons/passwordreset/ResetLinkAssignment.java",
+        49
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_decode.adoc",
+        8
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+        28
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+        40
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment.adoc",
+        7
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment2.adoc",
+        7
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_libraries_solution.adoc",
+        7
+      ],
+      [
+        "Hex High Entropy String",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_refresh.adoc",
+        32
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+        35
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+        77
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/html/JWT.html",
+        323
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/html/JWT.html",
+        389
+      ],
+      [
+        "JSON Web Token",
+        "webgoat/src/main/resources/lessons/jwt/images/logs.txt",
+        2
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/resources/lessons/passwordreset/i18n/WebGoatLabels.properties",
+        4
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/resources/lessons/securepasswords/i18n/WebGoatLabels.properties",
+        4
+      ],
+      [
+        "Secret Keyword",
+        "webgoat/src/main/resources/lessons/securepasswords/i18n/WebGoatLabels_nl.properties",
+        4
+      ]
+    ]
+  },
+  "sca_before": {
+    "total": 146,
+    "by_sev": {
+      "CRITICAL": 18,
+      "HIGH": 60,
+      "MODERATE": 54,
+      "LOW": 14
+    },
+    "by_comp": {
+      "com.thoughtworks.xstream/xstream@1.4.5": 36,
+      "org.apache.tomcat.embed/tomcat-embed-core@10.1.36": 33,
+      "org.springframework.security/spring-security-core@6.4.3": 5,
+      "org.springframework.security/spring-security-web@6.4.3": 2,
+      "org.springframework/spring-webmvc@6.2.3": 14,
+      "org.thymeleaf/thymeleaf-spring6@3.1.2.RELEASE": 3,
+      "org.thymeleaf/thymeleaf@3.1.2.RELEASE": 3,
+      "com.fasterxml.jackson.core/jackson-core@2.18.2": 4,
+      "com.fasterxml.jackson.core/jackson-databind@2.18.2": 13,
+      "com.google.guava/guava@33.4.0-jre": 1,
+      "io.micrometer/micrometer-core@1.14.4": 1,
+      "org.bitbucket.b_c/jose4j@0.9.3": 2,
+      "org.jsoup/jsoup@1.18.3": 2,
+      "org.springframework.boot/spring-boot-starter-actuator@3.4.3": 2,
+      "org.springframework.boot/spring-boot@3.4.3": 2,
+      "org.springframework.data/spring-data-commons@3.4.3": 4,
+      "org.springframework.security/spring-security-crypto@6.4.3": 1,
+      "org.springframework/spring-core@6.2.3": 2,
+      "org.springframework/spring-expression@6.2.3": 3,
+      "ch.qos.logback/logback-core@1.5.16": 4,
+      "com.nimbusds/nimbus-jose-jwt@9.37.3": 1,
+      "org.apache.commons/commons-lang3@3.14.0": 1,
+      "org.apache.logging.log4j/log4j-api@2.24.3": 1,
+      "org.jruby/jruby@9.4.12.0": 1,
+      "org.springframework.boot/spring-boot-autoconfigure@3.4.3": 1,
+      "org.springframework.security/spring-security-oauth2-jose@6.4.3": 1,
+      "org.springframework/spring-web@6.2.3": 2,
+      "org.springframework/spring-context@6.2.3": 1
+    }
+  },
+  "sca_after": {
+    "total": 106,
+    "by_sev": {
+      "CRITICAL": 10,
+      "HIGH": 43,
+      "MODERATE": 44,
+      "LOW": 9
+    },
+    "by_comp": {
+      "com.thoughtworks.xstream/xstream@1.4.5": 36,
+      "org.springframework.security/spring-security-web@6.4.13": 2,
+      "org.springframework/spring-webmvc@6.2.3": 14,
+      "org.thymeleaf/thymeleaf-spring6@3.1.2.RELEASE": 3,
+      "org.thymeleaf/thymeleaf@3.1.2.RELEASE": 3,
+      "com.fasterxml.jackson.core/jackson-core@2.18.2": 4,
+      "com.fasterxml.jackson.core/jackson-databind@2.18.2": 13,
+      "com.google.guava/guava@33.4.0-jre": 1,
+      "io.micrometer/micrometer-core@1.14.4": 1,
+      "org.jsoup/jsoup@1.18.3": 2,
+      "org.springframework.boot/spring-boot-starter-actuator@3.4.3": 2,
+      "org.springframework.boot/spring-boot@3.4.3": 2,
+      "org.springframework.data/spring-data-commons@3.4.3": 4,
+      "org.springframework/spring-core@6.2.3": 2,
+      "org.springframework/spring-expression@6.2.3": 3,
+      "ch.qos.logback/logback-core@1.5.16": 4,
+      "org.apache.commons/commons-lang3@3.14.0": 1,
+      "org.apache.logging.log4j/log4j-api@2.24.3": 1,
+      "org.jruby/jruby@9.4.12.0": 1,
+      "org.springframework.boot/spring-boot-autoconfigure@3.4.3": 1,
+      "org.springframework.security/spring-security-core@6.4.13": 2,
+      "org.springframework.security/spring-security-oauth2-jose@6.4.13": 1,
+      "org.springframework/spring-web@6.2.3": 2,
+      "org.springframework/spring-context@6.2.3": 1
+    }
+  }
+}

@@ -1,0 +1,10 @@
+### V7 login as Jerry
+>>> POST /WebGoat/JWT/refresh/login  {"user":"Jerry","password":"***"}
+<<< HTTP 200
+<<< { "access_token" : "eyJhbGciOiJIUzUxMiJ9.eyJhZG1pbiI6ImZhbHNlIiwidXNlciI6IkplcnJ5In0.Z-ZX2L0Tuub0LEyj9NmyVADu7tK40gL9h1EJeRg1DDa6z5_H-SrexH1MYHoIxRyApnOP7NfFonP3rOw1Y5qi0A", "refresh_token" : "hdwZuKmeoDCwCbOELIQF" }
+
+### V7 POST /JWT/refresh/newToken: Tom's expired token + Jerry's refresh token
+>>> POST /WebGoat/JWT/refresh/newToken  Authorization: Bearer <Tom, exp=2018-05-13>  {"refresh_token":"hdwZuKmeoDCwCbOELIQF" (Jerry's)}
+<<< HTTP 200
+<<< { "access_token" : "eyJhbGciOiJIUzUxMiJ9.eyJhZG1pbiI6ImZhbHNlIiwidXNlciI6IlRvbSJ9.a4yUoDOuv6L7ICs-HsE6craLHG_u6YDTkmXiGHjF7GdJZVZWCTurWBBunW9ujab8f4vNG31XAEvWYUEmAt0SGg", "refresh_token" : "pvYYXlzTqtfBDcSEuSLt" }
+

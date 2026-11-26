@@ -1,0 +1,269 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.owasp.webgoat:webgoat >----------------------
+[INFO] Building WebGoat 2025.3
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (restrict-log4j-versions) @ webgoat ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ webgoat ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 640 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- build-helper:3.6.0:reserve-network-port (reserve-container-port) @ webgoat ---
+[INFO] Reserved port 64806 for webgoat.port
+[INFO] Reserved port 64807 for webwolf.port
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ webgoat ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- build-helper:3.6.0:add-test-source (add-integration-test-source-as-test-sources) @ webgoat ---
+[INFO] Test Source directory: E:\rgr-baseline\webgoat\src\it\java added.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ webgoat ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ webgoat ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 118 source files with javac [debug parameters release 23] to target\test-classes
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[51,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java:[53,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/Assignment7Test.java:[28,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[34,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignmentTest.java:[37,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[40,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[42,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /E:/rgr-baseline/webgoat/src/test/java/org/owasp/webgoat/webwolf/mailbox/MailboxControllerTest.java:[43,4] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[INFO] /E:/rgr-baseline/webgoat/src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java: E:\rgr-baseline\webgoat\src\it\java\org\owasp\webgoat\playwright\webwolf\JwtUITest.java uses or overrides a deprecated API.
+[INFO] /E:/rgr-baseline/webgoat/src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /E:/rgr-baseline/webgoat/src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /E:/rgr-baseline/webgoat/src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ webgoat ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.owasp.webgoat.rgr.RgrEvidenceTest
+[main] INFO  o.o.w.r.RgrEvidenceTest - Starting RgrEvidenceTest using Java 23.0.1 with PID 17384 (started by yaros in E:\rgr-baseline\webgoat) 
+[main] INFO  o.o.w.r.RgrEvidenceTest - No active profile set, falling back to 1 default profile: "default" 
+[main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+[main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces. 
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\yaros\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 0 (http) 
+2026-11-26T12:49:14.655+02:00  INFO 17384 --- [WebGoat] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[main] INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+2026-11-26T12:49:14.659+02:00  INFO 17384 --- [WebGoat] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+[main] INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36] 
+2026-11-26T12:49:14.790+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring embedded WebApplicationContext
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring embedded WebApplicationContext 
+[main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5013 ms 
+2026-11-26T12:49:15.913+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:15.967+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.database.base.Schema   : Creating schema "container" ...
+[main] INFO  o.f.c.i.d.b.Schema - Creating schema "container" ... 
+2026-11-26T12:49:15.989+02:00  INFO 17384 --- [WebGoat] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "container"."flyway_schema_history" ...
+[main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "container"."flyway_schema_history" ... 
+2026-11-26T12:49:16.069+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "container": null
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "container": null 
+2026-11-26T12:49:16.096+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "container" to version "1 - init"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "container" to version "1 - init" 
+2026-11-26T12:49:16.125+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "container", now at version v1 (execution time 00:00.010s)
+[main] INFO  o.f.c.i.c.DbMigrate - Successfully applied 1 migration to schema "container", now at version v1 (execution time 00:00.010s) 
+2026-11-26T12:49:16.411+02:00  INFO 17384 --- [WebGoat] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+[main] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2026-11-26T12:49:16.506+02:00  INFO 17384 --- [WebGoat] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+[main] INFO  o.h.Version - HHH000412: Hibernate ORM core version 6.6.8.Final 
+2026-11-26T12:49:16.582+02:00  INFO 17384 --- [WebGoat] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+[main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled 
+[main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer 
+2026-11-26T12:49:16.892+02:00  WARN 17384 --- [WebGoat] [           main] org.hibernate.orm.deprecation            : HHH90000025: HSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[main] WARN  o.h.o.deprecation - HHH90000025: HSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+2026-11-26T12:49:16.922+02:00  INFO 17384 --- [WebGoat] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@1028a747']
+	Database driver: undefined/unknown
+	Database version: 2.7.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[main] INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@1028a747']
+	Database driver: undefined/unknown
+	Database version: 2.7.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown 
+2026-11-26T12:49:17.944+02:00  INFO 17384 --- [WebGoat] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+[main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+[main] INFO  o.o.w.l.l.LogBleedingTask - Password for admin: NGFhYzU0YzQtNzMyMi00MWM2LWE2MjktYzA5YTEyZmEwZWUz 
+[main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR 
+[main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator' 
+[main] WARN  o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry - One of the patterns in [/favicon.ico, /css/**, /images/**, /js/**, fonts/**, /plugins/**, /registration, /register.mvc, /actuator/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception. 
+[main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+[main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 64808 (http) with context path '/WebGoat' 
+[main] INFO  o.o.w.r.RgrEvidenceTest - Started RgrEvidenceTest in 18.175 seconds (process running for 19.961) 
+2026-11-26T12:49:27.220+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:27.247+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.database.base.Schema   : Creating schema "test" ...
+[main] INFO  o.f.c.i.d.b.Schema - Creating schema "test" ... 
+2026-11-26T12:49:27.250+02:00  INFO 17384 --- [WebGoat] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "test"."flyway_schema_history" ...
+[main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "test"."flyway_schema_history" ... 
+2026-11-26T12:49:27.266+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": null
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": null 
+2026-11-26T12:49:27.269+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2018.09.26.1 - users"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2018.09.26.1 - users" 
+2026-11-26T12:49:27.284+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.25.1 - jwt"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.25.1 - jwt" 
+2026-11-26T12:49:27.301+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.1 - servers"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.1 - servers" 
+2026-11-26T12:49:27.321+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.2 - users"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.2 - users" 
+2026-11-26T12:49:27.338+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.3 - salaries"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.3 - salaries" 
+2026-11-26T12:49:27.360+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.4 - tan"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.4 - tan" 
+2026-11-26T12:49:27.374+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.5 - challenge assignment"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.5 - challenge assignment" 
+2026-11-26T12:49:27.384+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.6 - user system data"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.6 - user system data" 
+2026-11-26T12:49:27.399+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.09.26.7 - employees"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.09.26.7 - employees" 
+2026-11-26T12:49:27.416+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2019.11.10.1 - introduction"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2019.11.10.1 - introduction" 
+2026-11-26T12:49:27.433+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2021.03.13.8 - grant"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2021.03.13.8 - grant" 
+2026-11-26T12:49:27.451+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "test" to version "2021.11.03.1 - ac"
+[main] INFO  o.f.c.i.c.DbMigrate - Migrating schema "test" to version "2021.11.03.1 - ac" 
+2026-11-26T12:49:27.456+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 12 migrations to schema "test", now at version v2021.11.03.1 (execution time 00:00.027s)
+[main] INFO  o.f.c.i.c.DbMigrate - Successfully applied 12 migrations to schema "test", now at version v2021.11.03.1 (execution time 00:00.027s) 
+2026-11-26T12:49:27.474+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:49:27.702+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:27.731+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.023s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.023s) 
+2026-11-26T12:49:27.737+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:49:27.737+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:49:27.737+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:49:28.390+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:28.416+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.014s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.014s) 
+2026-11-26T12:49:28.421+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:49:28.421+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:49:28.424+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:49:28.571+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:28.584+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.012s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.012s) 
+2026-11-26T12:49:28.592+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:49:28.594+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:49:28.594+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:49:28.684+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:28.700+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.011s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.011s) 
+2026-11-26T12:49:28.704+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:49:28.707+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:49:28.707+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:49:28.783+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:28.795+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.010s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.010s) 
+2026-11-26T12:49:28.801+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:49:28.801+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:49:28.801+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+2026-11-26T12:49:28.878+02:00  INFO 17384 --- [WebGoat] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7)
+[main] INFO  o.f.c.FlywayExecutor - Database: jdbc:hsqldb:mem:test (HSQL Database Engine 2.7) 
+2026-11-26T12:49:28.891+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.010s)
+[main] INFO  o.f.c.i.c.DbValidate - Successfully validated 13 migrations (execution time 00:00.010s) 
+2026-11-26T12:49:28.896+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "test": 2021.11.03.1
+[main] INFO  o.f.c.i.c.DbMigrate - Current version of schema "test": 2021.11.03.1 
+2026-11-26T12:49:28.896+02:00  INFO 17384 --- [WebGoat] [           main] o.f.core.internal.command.DbMigrate      : Schema "test" is up to date. No migration necessary.
+[main] INFO  o.f.c.i.c.DbMigrate - Schema "test" is up to date. No migration necessary. 
+2026-11-26T12:49:28.899+02:00  INFO 17384 --- [WebGoat] [           main] o.a.c.c.C.[.[localhost].[/WebGoat]       : Initializing Spring TestDispatcherServlet ''
+[main] INFO  o.a.c.c.C.[.[.[/WebGoat] - Initializing Spring TestDispatcherServlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet '' 
+[main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms 
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.11 s -- in org.owasp.webgoat.rgr.RgrEvidenceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.799 s
+[INFO] Finished at: 2026-11-26T12:49:29+02:00
+[INFO] ------------------------------------------------------------------------

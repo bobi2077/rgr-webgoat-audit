@@ -1,0 +1,29 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.owasp.webgoat:webgoat >----------------------
+[INFO] Building WebGoat 2025.3
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotbugs:4.9.3.0:spotbugs (default-cli) @ webgoat ---
+[INFO] Fork Value is true
+     [java] The following classes needed for analysis were missing:
+     [java]   makeConcatWithConstants
+     [java]   apply
+     [java]   mapRow
+     [java]   test
+     [java]   hashCode
+     [java]   equals
+     [java]   accept
+     [java]   get
+     [java]   applyAsInt
+     [java]   applyAsLong
+[INFO] Done SpotBugs Analysis....
+[WARNING] Unable to find a URL to the parent project. The parent menu will NOT be added.
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.0.0-M9 skin
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  42.711 s
+[INFO] Finished at: 2026-11-26T12:44:44+02:00
+[INFO] ------------------------------------------------------------------------

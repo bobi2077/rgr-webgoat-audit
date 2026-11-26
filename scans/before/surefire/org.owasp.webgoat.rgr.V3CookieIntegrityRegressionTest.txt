@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.111 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest
+org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.tamperedCookieRejected -- Time elapsed: 0.052 s <<< FAILURE!
+java.lang.AssertionError: Response cookie 'spoof_auth' httpOnly expected:<true> but was:<false>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.CookieResultMatchers.lambda$httpOnly$15(CookieResultMatchers.java:228)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.tamperedCookieRejected(V3CookieIntegrityRegressionTest.java:59)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.forgedCookieRejected -- Time elapsed: 0.050 s <<< FAILURE!
+java.lang.AssertionError: 
+JSON path "$.lessonCompleted"
+Expected: is <false>
+     but: was <true>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:107)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.assertNotLoggedInAsTom(V3CookieIntegrityRegressionTest.java:41)
+	at org.owasp.webgoat.rgr.V3CookieIntegrityRegressionTest.forgedCookieRejected(V3CookieIntegrityRegressionTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

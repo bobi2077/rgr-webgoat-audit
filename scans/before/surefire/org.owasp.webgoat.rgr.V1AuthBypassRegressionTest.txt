@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.owasp.webgoat.rgr.V1AuthBypassRegressionTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! -- in org.owasp.webgoat.rgr.V1AuthBypassRegressionTest
+org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.unknownUserIsRejected -- Time elapsed: 0.012 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expecting value to be false but was true
+	at org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.unknownUserIsRejected(V1AuthBypassRegressionTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.renamedParametersAreRejected -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expecting value to be false but was true
+	at org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.renamedParametersAreRejected(V1AuthBypassRegressionTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.partialAnswersAreRejected -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+Expecting value to be false but was true
+	at org.owasp.webgoat.rgr.V1AuthBypassRegressionTest.partialAnswersAreRejected(V1AuthBypassRegressionTest.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
