@@ -24,7 +24,7 @@ class V2SessionIdRegressionTest extends LessonTest {
   @Test
   @DisplayName("Session id must not have the '<counter>-<epochMillis>' structure")
   void idIsNotCounterPlusTimestamp() {
-    assertThat(newId()).doesNotMatch("^\d+-\d{13}$");
+    assertThat(newId()).doesNotMatch("^[0-9]+-[0-9]{13}$");
   }
 
   @Test
@@ -36,7 +36,7 @@ class V2SessionIdRegressionTest extends LessonTest {
     if (a.contains("-") && b.contains("-")) {
       String pa = a.substring(0, a.indexOf('-'));
       String pb = b.substring(0, b.indexOf('-'));
-      if (pa.matches("\d+") && pb.matches("\d+")) {
+      if (pa.matches("[0-9]+") && pb.matches("[0-9]+")) {
         assertThat(Long.parseLong(pb) - Long.parseLong(pa)).isNotEqualTo(1L);
       }
     }

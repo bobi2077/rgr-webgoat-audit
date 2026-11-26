@@ -55,7 +55,7 @@ class V7RefreshTokenBindingRegressionTest extends LessonTest {
     String jerryRefresh = (String) loginJerry().get("refresh_token");
     String tomExpired =
         Jwts.builder()
-            .setClaims(Map.of("admin", "false", "user", "Tom"))
+            .setClaims(new java.util.HashMap<>(Map.of("admin", "false", "user", "Tom")))
             .setIssuedAt(new Date(1526131411000L))
             .setExpiration(new Date(1526217811000L))
             .signWith(SignatureAlgorithm.HS512, serverKey())
