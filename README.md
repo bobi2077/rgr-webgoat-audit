@@ -1,7 +1,7 @@
 # РГР: аудит захищеності OWASP WebGoat (варіант 9 — автентифікація та сесії)
 
 Цей репозиторій містить середовище, виправлення, регресійні тести та результати аналізу до звіту
-`report/RGR_WebGoat_variant9.pdf`.
+`report/RGR_WebGoat_variant9.docx`.
 
 **Коміт, що відповідає зданій роботі (код, тести, виправлення): `88fba89`.**
 
@@ -14,7 +14,7 @@
 | `tools/osv_sca.py`, `tools/compare_scans.py` | SCA (SBOM CycloneDX → OSV.dev) і порівняння «до/після» |
 | `scans/before`, `scans/after` | повні звіти інструментів і surefire |
 | `scans/evidence/{before,after}` | транскрипти «запит → відповідь» для V1–V7 |
-| `report/` | звіт (DOCX/PDF) і діаграма потоків даних |
+| `report/` | звіт (DOCX) і діаграма потоків даних |
 
 ## Історія комітів
 
